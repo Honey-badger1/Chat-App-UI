@@ -225,7 +225,7 @@ border-radius:100%;
     padding-left:35px ;
     padding-right:20px;
     font-size: 1.4rem;
-    background: url('./img/search.png') no-repeat rgba(255,255,255, 0.3);
+    background: url('img/search.png') no-repeat rgba(255,255,255, 0.3);
     background-position: 15px center;
     background-size: 20px 20px;
 }
