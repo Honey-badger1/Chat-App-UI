@@ -32,7 +32,7 @@ body{
 }
 #head-line{
     display: grid;
-    grid: 30px/50vw 90px;
+    grid: 30px/54.5vw 90px;
     grid-area:head-line;
     background: rgb(86,130,163);
     color:#ccc;
@@ -76,7 +76,7 @@ body{
     height: 20px; 
     color:#ccc;
     width: 20px;
-    margin-left: 30px;
+    margin-left: 45px;
     margin-top: 10px;
     background-color:  rgb(86,130,163);
   
@@ -124,7 +124,7 @@ h3{
     color:rgb(31, 30, 30);
     position: absolute;
     background-color: #9cbbe7;
-    width: 305px;
+    width: 325px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 2;
 }
