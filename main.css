@@ -151,13 +151,13 @@ h3{
         /375px 75.5vw;
     
     width: 1535px;
-    height: 675.5px;
+    height: 720px;
     position: fixed;
     background:#FFF;
     border-radius: 10px;
     
 }
-@media only screen and(min-width: 300px){
+@media only screen and(max-width: 700px){
     #chat-container {
         display: grid;
         position: fixed;
@@ -169,6 +169,7 @@ h3{
         'conversation-list  conversation-list '2fr/
         720px;
         grid-column:2/4;
+        min-width: 375px;
         grid-row: 1/4;
         overflow: hidden;
         
@@ -402,9 +403,9 @@ width: 20px;
     display: grid;
     grid:
      'me  chat other' 3vh
-     'me  chat other'5vh 
-    'me symb other '5vh
-    / 15vw 48vw 16vw;
+     'me  chat other'4vh 
+    'me symb other '6vh
+    / 15vw 48vw 15vw;
     align-content:center;
     align-items:center;
     grid-area:chat-form;
