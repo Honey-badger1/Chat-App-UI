@@ -32,18 +32,18 @@ body{
 }
 #head-line{
     display: grid;
-    grid: 6vh/60vw 15vw;
+    grid: 30px/50vw 90px;
     grid-area:head-line;
     background: rgb(86,130,163);
     color:#ccc;
-    border-radius: 0 10px 0 0;
+
     box-shadow: 0 1px 3px -1px rgba(0,0,0,0.75);
 
 }
 .ldropbtn {
     background-color:rgb(86,130,163);
     color: white;
-    margin-left: 5vw;
+    margin-left: 9vw;
     border: none;
 }
 #head-line input{ 
@@ -51,12 +51,12 @@ body{
     outline: none;
     font-weight: bold;
     border-radius: 2px;
-    height: 3.5vh;
-    width: 65vw;
+    height: 22px;
+    width: 0.5fr;
     border: 0;
-    margin-left: 2vw;
-    margin-top: 2vh;
-    padding-left:7vw ;
+    margin-left: 27px;
+    margin-top: 12px;
+    padding-left:35px ;
     padding-right:30vw;
     font-size: 1.2rem;
     background: url('img/search.png') no-repeat rgba(255,255,255, 0.3);
@@ -103,7 +103,7 @@ h3{
     color:white;
     position: absolute;
     background-color:rgb(42, 95, 136);
-    min-width: 25vw;
+    min-width: 375px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 2;
 }
@@ -124,7 +124,7 @@ h3{
     color:rgb(31, 30, 30);
     position: absolute;
     background-color: #9cbbe7;
-    min-width: 25vw;
+    width: 305px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 2;
 }
@@ -144,36 +144,47 @@ h3{
 #chat-container{
     display: grid;
     grid:
-     'comand-line head-line' 7vh
-     'search-container chat-title' 6vh
-     'conversation-list chat-message-list' 74vh
-     'new-message-container chat-form' 13vh  
-        /25vw 75vw;
+     'comand-line head-line' 50px
+     'search-container chat-title' 40px
+     'conversation-list chat-message-list' 1fr
+     'new-message-container chat-form' 80px 
+        /375px 75.5vw;
     
-    width:100vw;
-    height: 100vh;
+    width: 1535px;
+    height: 675.5px;
     background:#FFF;
     border-radius: 10px;
     
 }
-@media only screen and (max-width: 500px){
-    #chat-container {
-        grid-template-areas:   
-        'comand-line' 
-        'search-container'
-        'conversation-list ';
-  
-
-}
-}
-@media (max-width:300px) {
+@media only screen and(max-width: 500px){
     #chat-container {
         display: grid;
-        grid-template-areas:
-        'comand-line' 7vh
-        'search-container' 6vh
-        'conversation-list '72vh
-        'new-message-container '15vh;
+        grid-template-areas: 
+        
+        'comand-line ' 30px
+        'search-container '45px
+        'conversation-list  '2fr/
+        3fr;
+        grid-column:2/4;
+        grid-row: 2/4;
+        
+        
+       
+    
+    }
+   
+}
+  
+
+
+@media (max-width:400px) {
+    #chat-container {
+        display: grid;
+        grid-template-areas:   
+        'comand-line comand-line' 30px
+        'search-container search-container'45px
+        'conversation-list  conversation-list'1fr/
+        4fr;
 }
 }
 
@@ -194,9 +205,10 @@ h3{
 
 .conversation{
     display: grid;
-    grid-template-columns: 5vw 14vw 6vw;
+    grid-template-columns: 55px 195px 100px ;
     color: rgb(15, 8, 8);
     font-size: 1.3rem;
+    border-right:2px solid rgb(108, 128, 150);
     padding: 20px 20px 20px 15px;
 }
 
@@ -274,7 +286,7 @@ color: white;}
 
 #chat-title{
     display:grid;
-    grid: 30vh / 65vw 5vw;
+    grid: 35px / 0.95fr 60px;
     align-content:center;
     align-items: center;
     grid-area:chat-title;
@@ -292,7 +304,7 @@ width: 20px;
 }
 #chat-message-list{
     display: flex;
-    width: 75vw;
+    width: 62vw;
     flex-direction: column-reverse;
     grid-area:chat-message-list;
     padding: 0 20px ;
