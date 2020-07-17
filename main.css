@@ -152,21 +152,25 @@ h3{
     
     width: 1535px;
     height: 675.5px;
+    position: fixed;
     background:#FFF;
     border-radius: 10px;
     
 }
-@media only screen and(max-width: 500px){
+@media only screen and(min-width: 300px){
     #chat-container {
         display: grid;
+        position: fixed;
+        width: 100%;
         grid-template-areas: 
         
-        'comand-line ' 30px
-        'search-container '45px
-        'conversation-list  '2fr/
-        3fr;
+        'comand-line comand-line ' 30px
+        'search-container search-container '45px
+        'conversation-list  conversation-list '2fr/
+        720px;
         grid-column:2/4;
-        grid-row: 2/4;
+        grid-row: 1/4;
+        overflow: hidden;
         
         
        
@@ -247,7 +251,7 @@ color: white;}
     border-radius: 2px;
     height: 5vh;
     border: 0;
-    width: 21vw;
+    width: 350px;
     padding-left:35px ;
     font-size: 1.4rem;
     background: url('img/search.png') no-repeat rgba(133, 125, 125, 0.3);
