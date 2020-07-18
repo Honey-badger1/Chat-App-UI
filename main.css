@@ -31,8 +31,7 @@ body{
     border: none;
 }
 #head-line{
-    display: grid;
-    grid: 30px/54vw 5vw;
+    display: flex;
     grid-area:head-line;
     background: rgb(86,130,163);
     color:#ccc;
@@ -42,26 +41,36 @@ body{
 }
 .ldropbtn {
     background-color:rgb(86,130,163);
-    color: white;
-    margin-left: 9vw;
+    color: #ffffff;
+    width: 30px;
+    height: 30px;
+    margin-left: 3vw;
+   
     border: none;
 }
-#head-line input{ 
+.search {
+    background-color:rgb(86,130,163);
+    width: 30px;
+    height: 30px;
+    color: white;
+    margin-top: 1vw;
+    border: none;
+}
+.head{ 
     color:#ccc;
     outline: none;
-    font-weight: bold;
     border-radius: 2px;
     height: 22px;
-    width: 45vw;
+    width: 60vw;
     border: 0;
-    margin-left: 27px;
-    margin-top: 12px;
-    padding-left:35px ;
-    padding-right:30vw;
-    font-size: 1.2rem;
-    background: url('img/search.png') no-repeat rgba(255,255,255, 0.3);
-    background-position: 15px center;
+    font-size: 1.7rem;
+    text-align: start;
+    margin-top: 1vw;
     background-size: 20px 20px;
+}
+.search> img{
+    height:20px;
+    width: 20px;
 }
 
 .dropbtn > img{
@@ -145,7 +154,7 @@ h3{
     display: grid;
     grid:
      'comand-line head-line' 50px
-     'search-container chat-title' 40px
+     'search-container cchat-message-list' 40px
      'conversation-list chat-message-list' 1fr
      'new-message-container chat-form' 80px 
         /375px 75.5vw;
@@ -284,29 +293,12 @@ color: white;}
     font-size: 3.5rem;
 }
 
-#chat-title, 
+
 #chat-form{
   background:rgb(207, 204, 204);
 }
 
-#chat-title{
-    display:grid;
-    grid: 35px / 0.95fr 60px;
-    align-content:center;
-    align-items: center;
-    grid-area:chat-title;
-    color:rgb(86,130,163);
-    font-weight: bold;
-    font-size:2.0rem;
-    box-shadow: 0 1px 3px -1px rgba(0,0,0,0.75);
-    padding: 0 20px;
-}
 
-#chat-title > img{
-cursor: pointer;
-height:20px;
-width: 20px;
-}
 #chat-message-list{
     display: flex;
     width: 62vw;
@@ -409,6 +401,7 @@ width: 20px;
     align-content:center;
     align-items:center;
     grid-area:chat-form;
+    background: white;
     border-radius: 0 10px 0 0;
     border-top: 1px solid rgba(0,0,0,0.25);
 }
@@ -498,12 +491,13 @@ width: 20px;
 }
 .symb{
     grid-area:symb;
+    border-top: 1px solid rgb(52, 198, 235) ;
     margin-bottom: 1vw;
     margin-left: 0.7vw;
     display: flex; 
     width: 25vw; 
     background:white;
-    border: 2px solid white;
+    border-top: 1px solid rgb(44, 188, 207);
 
 }  
   
