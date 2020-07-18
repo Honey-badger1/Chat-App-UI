@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" media="" href="main.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat App</title>
@@ -11,14 +11,15 @@
 
 <body>
 
-
+   <div id="wrap">
 
     <div id="chat-container">
+        
 
         <div id="comand-line">
             <div class="dropdown">
                 <button class="dropbtn"> <img src='img/menu.png' alt='menu'></button>
-                <h3>Chat App</h3>
+                
                 <div class="dropdown-content">
                     <a href="#">New group</a>
                     <a href="#">Contacts</a>
@@ -26,15 +27,19 @@
                     <a href="#">FAQ</a>
                     <a href="#">About</a>
                 </div>
+                
             </div>
+            <h3>Chat App</h3>
 
 
         </div>
         <div id="head-line">
             <h3 class="head">Quaver</h3>
-            <div class="dropdown">
-                <button class="search"> <img src='img/search.png' alt='search'></button>
-                <button class="ldropbtn"> <img src='img/drop.png' alt='menu'></button>
+            <h4 class="status">online</h4>
+            <button class="search"> <img src='img/search.png' alt='search'></button>
+            <div class="dropdown" style="float: right;">
+                
+                <button class="ldropbtn" > <img src='img/drop.png' alt='menu'></button>
                 <div class="leftdropdown-content">
                     <ul>
                     <li>Select messages</li>
@@ -57,7 +62,7 @@
             <div class="conversation active">
 
                 <img src='img/Quaver.png' alt='Quaver'>
-                <div class="title-text">
+                <div class="title-text:active">
                     Quaver
 
                 </div>
@@ -185,23 +190,29 @@
 
 
         </div>
-        <div id="new-message-container">
-            <a href='#' title="Add new conversation">+</a>>
-
-        </div>
+ 
         
         <div id="chat-message-list">
             <div class="message-row my-message">
+                
                 <div class="message-content">
-                    <div class="message-text">Ok</div>
+                    <img src='img/Безымянный.png' alt='Me'>
+                    
+                    <div class="message-text">
+                        <div class="message-who">Margo</div>
+                        Ok</div>
                     <div class="message-time">Jul 9</div>
 
                 </div>
             </div>
             <div class="message-row other-message">
+                
+               
                 <div class="message-content">
                     <img src='img/Quaver.png' alt='Quaver'>
-                    <div class="message-text"><q>But would you kindly ponder this question: What would your good
+                   
+                    <div class="message-text">
+                        <div class="message-who">Quaver</div><q>But would you kindly ponder this question: What would your good
                             do if
                             evil didn't exist, and what would the earth look like if all the shadows
                             disappeared? After all, shadows are cast by things and people.</q> </div>
@@ -213,7 +224,9 @@
         </div>
         <div id="chat-form">
             <img class="me" src='img/Безымянный.png' alt='Me'>
+           
             <img class="other" src='img/Quaver.png' alt='Other'>
+           
             
             <input type='text' placeholder='New message' />
             <div class="symb">
@@ -225,13 +238,15 @@
                 <img class="heart" src='img/heart.png' alt='heart'>
                 <img class="emo" src='img/emoji.png' alt='emoji'>
                 <img class="stiker" src='img/stiker.png' alt='stiker'>
-                <h4 class="sendm" title="send"> SEND</h4>
+                <h5 class="sendm" title="send"> SEND</h5>
+                
              </div>
 
-        </div>
+        </>
 
 
     </div>
+</div>
 
 
 </body>
