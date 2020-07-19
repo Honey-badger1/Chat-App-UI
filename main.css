@@ -96,8 +96,8 @@ body {
 
 
 .search>img {
-    height: 20px;
-    width: 20px;
+    height: 25px;
+    width: 25px;
 }
 
 .dropbtn>img {
@@ -109,9 +109,9 @@ body {
 }
 
 .ldropbtn>img {
-    height: 20px;
+    height: 30px;
     background: rgb(86, 130, 163);
-    width: 20px;
+    width: 30px;
 
     background-color: rgb(86, 130, 163);
 
@@ -197,7 +197,7 @@ h3 {
 #chat-container {
     display: grid;
     grid:
-        'comand-line head-line'7vh 'search-container chat-message-list'6vh 'conversation-list chat-message-list'75vh 'conversation-list chat-form'12vh /24.5vw 75.5vw;
+        'comand-line head-line'8vh 'search-container chat-message-list'8vh 'conversation-list chat-message-list'70vh 'conversation-list chat-form'14vh /24.5vw 75.5vw;
 
     width: 100%;
     height: 720px;
@@ -372,9 +372,9 @@ h3 {
     outline: none;
     font-weight: bold;
     border-radius: 2px;
-    height: 4vh;
+    height: 5vh;
     border: 0;
-    width: 22.5vw;
+    width: 23vw;
     padding-left: 35px;
     font-size: 1.4rem;
     background: url('img/search.png') no-repeat rgba(197, 201, 202, 0.3);
@@ -523,7 +523,7 @@ h3 {
 #chat-form {
     display: grid;
     grid:
-        'me  chat other'3vh 'me  chat other'4vh 'me symb other '6vh / 19vw 35.5vw 19vw;
+        'me  chat other'4vh 'me  chat other'5vh 'me symb other '6vh / 19vw 35.5vw 19vw;
     align-content: start;
     align-items: start;
     grid-area: chat-form;
