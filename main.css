@@ -44,6 +44,13 @@ body {
     box-shadow: 0 0.2vw 0 -0.2vw rgba(0, 0, 0, 0.75);
 
 }
+#head-line:hover{
+    background-color:rgb(85, 119, 146);
+} 
+#comand-line:hover{
+    background-color:rgb(85, 119, 146);
+} 
+
 
 .status {
     font-size: 14px;
@@ -65,7 +72,7 @@ body {
 }
 
 .ldropbtn:hover {
-    background-color: rgb(70, 105, 133);
+    background-color: rgb(85, 119, 146);;
 }
 
 .search {
@@ -79,7 +86,7 @@ body {
 }
 
 .search:hover {
-    background-color: rgb(70, 105, 133);
+    background-color: rgb(85, 119, 146);
     
 }
 
@@ -101,17 +108,17 @@ body {
 }
 
 .dropbtn>img {
-    height: 20px;
-    width: 20px;
+    height: 25px;
+    width: 25px;
     margin-left: 1vw;
     background-color: rgb(86, 130, 163);
 
 }
 
 .ldropbtn>img {
-    height: 30px;
+    height: 42px;
     background: rgb(86, 130, 163);
-    width: 30px;
+    width: 40px;
 
     background-color: rgb(86, 130, 163);
 
@@ -122,6 +129,7 @@ body {
     display: flex;
     place-items: center;
     color: #ccc;
+    text-align: center;
     grid-area: comand-line;
     border-radius: 10px 0 0 0;
 }
@@ -130,6 +138,7 @@ h3 {
     font-size: 14px;
     color: rgb(248, 247, 247);
     margin-left: 2vw;
+    
 }
 
 .dropdown .dropbtn {
@@ -329,9 +338,10 @@ h3 {
 
 .conversation {
     display: grid;
-    grid-template-columns: 4vw 15vw 6.5vw;
+    grid-template-columns:5vw 13vw 7.5vw;
     color: rgb(114, 106, 106);
     font-size: 1.1rem;
+    height:13vh;
     border-right: 2px solid rgb(214, 230, 241);
     padding: 20px 20px 20px 15px;
 }
@@ -420,8 +430,8 @@ h3 {
     width: 74vw;
     grid-area: chat-message-list;
     padding: 0 20px;
-    overflow-y: scroll;
-    scrollbar-width: auto;
+    overflow-x: scroll;
+    scrollbar-width: 7px;
     z-index: 2;
 }
 
@@ -591,7 +601,7 @@ h3 {
     grid-area: chat;
     border: 2px solid white;
     color: #330;
-    width: 28vw;
+    width: 25vw;
     height: 7vh;
     font-size: 1rem;
 
