@@ -500,6 +500,8 @@ h3 {
 .title-text:hover,
 .title-text:active {
     color: white;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .conversation-message {
@@ -518,7 +520,7 @@ h3 {
 #chat-form {
     display: grid;
     grid:
-        'me  chat other'3vh 'me  chat other'4vh 'me symb other '6vh / 18vw 38.5vw 18vw;
+        'me  chat other'3vh 'me  chat other'4vh 'me symb other '6vh / 19vw 35.5vw 19vw;
     align-content: start;
     align-items: start;
     grid-area: chat-form;
@@ -576,7 +578,7 @@ h3 {
     grid-area: chat;
     border: 2px solid white;
     color: #330;
-    width: 31vw;
+    width: 28vw;
     height: 7vh;
     font-size: 1rem;
 
@@ -635,7 +637,7 @@ h3 {
     margin-bottom: 1vw;
     margin-right: 5vw;
     display: flex;
-    width: 31vw;
+    width: 28vw;
     background: white;
     border-top: 1.5px solid rgb(44, 188, 207);}
 
