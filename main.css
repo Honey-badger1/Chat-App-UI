@@ -668,3 +668,14 @@ h3 {
 
 
 }
+@media only screen and (max-height: 690px) {
+    
+    #chat-container{
+        display: grid;
+        grid:
+            'comand-line head-line'0.205fr
+             'search-container chat-message-list'0.15fr
+             'conversation-list chat-message-list' 60vh 
+             'conversation-list chat-form'130px /24.5vw 74.5vw;
+        }
+    }
