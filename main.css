@@ -258,7 +258,7 @@ h3 {
 #chat-container {
     display: grid;
     grid:
-        'comand-line head-line'0.23fr 'search-container chat-message-list'0.15fr 'conversation-list chat-message-list'2fr 'conversation-list chat-form'0.48fr /0.5fr 1.5fr;
+        'comand-line head-line'0.24fr 'search-container chat-message-list'0.18fr 'conversation-list chat-message-list'2fr 'conversation-list chat-form'0.48fr /0.5fr 1.5fr;
 
     width: 1010px;
     height: 700px;
@@ -295,7 +295,7 @@ h3 {
 .conversation {
     display: grid;
     grid-template-columns: 60px 1fr 50px;
-    grid-template-rows: 24px 39px;
+    grid-template-rows: 27px 36px;
     color: rgb(114, 106, 106);
     font-size: 1.1rem;
     height: 63px;
@@ -496,7 +496,7 @@ h3 {
     font-size: 14px;
     color: rgb(53, 50, 50);
     padding-left: 5px;
-    margin-bottom: 5px;
+    margin-top: 7px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -522,6 +522,7 @@ h3 {
     color: rgb(172, 170, 170);
     overflow: hidden;
     font-size: 1rem;
+    margin-top: 8px;
     
 }
 
@@ -763,7 +764,7 @@ h3 {
     #chat-container {
         display: grid;
         grid:
-            'comand-line head-line'47px 'search-container chat-message-list'0.2fr 'conversation-list chat-message-list'65vh 'conversation-list chat-form'90px /0.9fr 2.1fr;
+            'comand-line head-line'48px 'search-container chat-message-list'0.24fr 'conversation-list chat-message-list'65vh 'conversation-list chat-form'90px /0.9fr 2.1fr;
         margin-bottom: 28pxpx;
         width: 1010px;
 
