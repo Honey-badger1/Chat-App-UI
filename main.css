@@ -1,5 +1,4 @@
-*
- {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -17,12 +16,12 @@ html {
     font-size: 12px;
 }
 
-#conversation-list:hover{
+#conversation-list:hover {
     overflow-y: scroll;
 }
 
 #conversation-list::-webkit-scrollbar {
-    
+
     width: 3px;
     background-color: rgb(230, 241, 245);
 }
@@ -31,14 +30,15 @@ html {
     box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 6px inset;
     border-radius: 10px;
 }
-#chat-message-list:hover{
+
+#chat-message-list:hover {
     overflow-y: scroll;
 }
 
 
 #chat-message-list::-webkit-scrollbar {
     width: 10px;
-    margin-right: 10px ;
+    margin-right: 10px;
     background-color: rgb(230, 241, 245);
 }
 
@@ -46,15 +46,17 @@ html {
     box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 6px inset;
     border-radius: 10px;
 }
+
 body {
     display: grid;
     color: #000;
     background: 0 0;
-    background-color:rgba(227, 233, 238, 0.93);
-    font: 12px/18px 'Open Sans',"Lucida Grande","Lucida Sans Unicode",Arial,Helvetica,Verdana,sans-serif;
+    background-color: rgba(227, 233, 238, 0.93);
+    font: 12px/18px 'Open Sans', "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, Verdana, sans-serif;
     overflow: hidden;
 
-    place-items:center;}
+    place-items: center;
+}
 
 .dropdown {
     position: relative;
@@ -72,7 +74,7 @@ body {
 
 #head-line {
     display: grid;
-    grid-template-columns: 0.1fr 1.5fr  45px 45px;
+    grid-template-columns: 0.1fr 1.5fr 45px 45px;
     grid-area: head-line;
     background: rgb(86, 130, 163);
     align-items: center;
@@ -80,13 +82,15 @@ body {
     box-shadow: 0 0.2vw 0 -0.2vw rgba(0, 0, 0, 0.75);
 
 }
-#head-line:hover{
-    background-color:rgb(85, 119, 146);
-} 
-#comand-line:hover{
-    background-color:rgb(85, 119, 146);
 
-} 
+#head-line:hover {
+    background-color: rgb(85, 119, 146);
+}
+
+#comand-line:hover {
+    background-color: rgb(85, 119, 146);
+
+}
 
 
 .status {
@@ -103,7 +107,7 @@ body {
     color: #ffffff;
     width: 45px;
     height: 44px;
-    
+
     border: none;
     z-index: 2;
 }
@@ -111,7 +115,8 @@ body {
 .ldropbtn:hover {
     background-color: rgb(85, 119, 146);
 }
-.ldropbtn:hover > img{
+
+.ldropbtn:hover>img {
     background-color: rgb(85, 119, 146);
 }
 
@@ -127,7 +132,7 @@ body {
 
 .search:hover {
     background-color: rgb(85, 119, 146);
-    
+
 }
 
 .head {
@@ -171,7 +176,7 @@ body {
     color: white;
     text-align: center;
     grid-area: comand-line;
-  
+
 }
 
 h3 {
@@ -179,7 +184,7 @@ h3 {
     font-weight: 596;
     color: rgb(248, 247, 247);
     margin-left: 39px;
-    
+
 }
 
 .dropdown .dropbtn {
@@ -189,9 +194,9 @@ h3 {
 .dropdown-content {
     display: none;
     font-size: 16px;
-    color:rgb(17, 27, 34);
+    color: rgb(17, 27, 34);
     position: absolute;
-    background-color:white;
+    background-color: white;
     min-width: 315px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 2;
@@ -201,7 +206,7 @@ h3 {
     color: rgb(86, 130, 163);
     padding: 1.1vw 1.4vw;
     font-size: 1rem;
-    align-content:center;
+    align-content: center;
     text-align: start;
     text-decoration: none;
     display: block;
@@ -216,7 +221,7 @@ h3 {
 }
 
 .dropdown-content a:hover {
-    background-color:rgb(130, 170, 202);
+    background-color: rgb(130, 170, 202);
 }
 
 .leftdropdown-content ul>li:hover {
@@ -247,25 +252,22 @@ h3 {
     text-decoration: none;
     display: block;
     list-style-type: none;
-    
+
 }
 
 #chat-container {
     display: grid;
     grid:
-        'comand-line head-line'0.23fr
-         'search-container chat-message-list'0.15fr
-         'conversation-list chat-message-list' 2fr 
-         'conversation-list chat-form'0.48fr /0.5fr 1.5fr;
+        'comand-line head-line'0.23fr 'search-container chat-message-list'0.15fr 'conversation-list chat-message-list'2fr 'conversation-list chat-form'0.48fr /0.5fr 1.5fr;
 
-    width:1010px;
+    width: 1010px;
     height: 700px;
-   
+
     background: #FFF;
     overflow: hidden;
     margin-bottom: 28px;
     max-height: 100%;
-   
+
 
 }
 
@@ -284,30 +286,48 @@ h3 {
 
 #conversation-list {
     grid-area: conversation-list;
-    
-    overflow:hidden;
-    
+
+    overflow: hidden;
+
 
 }
 
 .conversation {
     display: grid;
-    grid-template-columns:60px 1fr 50px ;
+    grid-template-columns: 60px 1fr 64px;
+    grid-template-rows: 24px 39px;
     color: rgb(114, 106, 106);
     font-size: 1.1rem;
-    height:63px;
-    align-content:center;
-    border-right:2px solid rgba(227, 233, 238, 0.93);
+    height: 63px;
+    align-content: center;
+    border-right: 2px solid rgba(227, 233, 238, 0.93);
     padding: 20px 20px 20px 15px;
 }
-.unread > img{
-    width: 20px;
-    height: 20px;
-    z-index: 2;
-    margin-left: 25px;
+
+
+
+ p{
+   
+    font-size: 12px;
+    margin-left: 7px;
+    color: white;
+   
+  
 }
-.unreadm{
-    background-color:rgba(243, 244, 245, 0.93);
+.unread{
+
+   background: url('img/circle.png')center center no-repeat;;
+   width: 20px;
+   height: 20px;
+   border-radius:100%;
+   margin-top: 5px;
+   margin-left:35px ;
+  
+
+}
+
+.unreadm {
+    background-color: rgba(243, 244, 245, 0.93);
 }
 
 .conversation>img {
@@ -317,7 +337,8 @@ h3 {
     margin-right: 16px;
     border-radius: 100%;
 }
-.message-text p>img{
+
+.message-text p>img {
     width: auto;
     height: auto;
     border: none !important;
@@ -326,14 +347,14 @@ h3 {
 
 .conversation:hover {
     background: rgba(236, 243, 250, 0.979);
-    
+
 }
 
 .active {
-    background:  rgb(105, 145, 175);
+    background: rgb(105, 145, 175);
     color: white;
-    
-    
+
+
 }
 
 .conversation:hover {
@@ -345,14 +366,15 @@ h3 {
     align-items: center;
     padding: 0 10px;
     height: 57px;
-    place-items:center;
+    place-items: center;
     grid-area: search-container;
     box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 0.75);
     z-index: 1;
 }
+
 #search-container input:active {
-    background-color:white;
-    
+    background-color: white;
+
 }
 
 #search-container input {
@@ -382,19 +404,20 @@ h3 {
 #chat-form {
     background: rgb(207, 204, 204);
 }
-.dropdown-content>a img{
+
+.dropdown-content>a img {
     width: 25px;
     height: 25px;
     align-items: start;
     margin-right: 4vw;
-  
-    
+
+
 }
 
 #chat-message-list {
     display: flex;
     flex-direction: column-reverse;
-    width:1fr;
+    width: 1fr;
     grid-area: chat-message-list;
     padding: 0 20px;
     overflow: hidden;
@@ -410,7 +433,7 @@ h3 {
 
 .message-content {
     display: grid;
-    grid-template-columns: 140px 395px 90px;
+    grid-template-columns: 140px 1fr 130px;
     grid-auto-flow: row;
 }
 
@@ -431,7 +454,7 @@ h3 {
 .message-row {
     display: grid;
     grid-template-columns: 80%;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
 }
 
 .message-text {
@@ -441,8 +464,8 @@ h3 {
 }
 
 .message-time {
-    margin-left: 30px;
-    font-size: 1rem;
+    margin-left: 20px;
+    font-size: 0.9rem;
     color: #777;
 }
 
@@ -498,15 +521,13 @@ h3 {
     color: rgb(172, 170, 170);
     overflow: hidden;
     font-size: 1rem;
+    
 }
 
 #chat-form {
     display: grid;
     grid:
-        'me  chat smily other'20px 
-        'me  chat smily other'30px 
-        'symb symb symb symb '70px 
-        / 0.6fr 1fr 30px 0.5fr;
+        'me  chat smily other'50px 'symb symb symb symb '70px / 0.6fr 1fr 30px 0.5fr;
     align-content: start;
     align-items: start;
     grid-area: chat-form;
@@ -520,11 +541,11 @@ h3 {
     width: 25px;
     z-index: 1;
     margin-right: 13px;
-    margin-top: 14px;
+    margin-top: 20px;
 }
 
 
-.smily{
+.smily {
     height: 22px;
     width: 22px;
     margin-top: 10px;
@@ -542,7 +563,7 @@ h3 {
     width: 50px;
     border-radius: 100%;
     margin-left: 80px;
-    margin-top: 20px;
+    margin-top: 5px;
 }
 
 .other {
@@ -551,9 +572,9 @@ h3 {
     height: 50px;
     width: 50px;
     border-radius: 100%;
-    margin-left:30px ;
-    margin-top: 20px;
-    
+    margin-left: 30px;
+    margin-top: 5px;
+
 }
 
 
@@ -568,12 +589,12 @@ h3 {
 
 }
 
-.heart{
+.heart {
     height: 25px;
     width: 25px;
     z-index: 1;
     margin-right: 13px;
-    margin-top: 14px;
+    margin-top: 20px;
 }
 
 
@@ -581,23 +602,29 @@ h3 {
 
 .sendm {
 
-    font-size: 14px;
+    font-size: 15px;
     font-weight: bold;
     color: rgb(90, 163, 185);
     height: 25px;
     margin-left: 10px;
-    margin-top: 14px;
+    margin-top: 20px;
 
 }
+
 .smile {
     height: 25px;
     width: 25px;
     z-index: 1;
     margin-right: 13px;
-    margin-top: 14px;
+    margin-top: 20px;
 }
 
-
+.date{
+    text-align:center ;
+    color: rgb(172, 170, 170);
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
 
 .symb {
     grid-area: symb;
@@ -607,7 +634,8 @@ h3 {
     display: flex;
     width: 390px;
     background: white;
-    border-top: 1.5px solid rgb(44, 188, 207);}
+    border-top: 1.5px solid rgb(44, 188, 207);
+}
 
 
 
@@ -624,14 +652,11 @@ h3 {
 
 @media only screen and (max-width: 950px) {
 
-    #chat-container{
-    display: grid;
-    grid:
-        'comand-line head-line'0.205fr
-         'search-container chat-message-list'0.15fr
-         'conversation-list chat-message-list' 70vh 
-         'conversation-list chat-form'130px /24.5vw 74.5vw;
-      
+    #chat-container {
+        display: grid;
+        grid:
+            'comand-line head-line'0.205fr 'search-container chat-message-list'0.15fr 'conversation-list chat-message-list'70vh 'conversation-list chat-form'130px /24.5vw 74.5vw;
+
     }
 
     #search-container input {
@@ -648,6 +673,7 @@ h3 {
         background-position: 15px center;
         background-size: 20px 20px;
     }
+
     .smile {
 
         height: 30px;
@@ -655,20 +681,26 @@ h3 {
         display: none;
         margin-right: 1vw;
     }
-    .heart{
+
+    .heart {
         display: none;
     }
 
-   
+
+
     .message-content {
         display: grid;
-        grid-template-columns: 20vw 40vw 50px;
+        grid-template-columns: 150px 0.9fr 120px;
         grid-auto-flow: row;
     }
-    
-    
 
-  
+    .message-row>img {
+        margin-left: 30px;
+    }
+
+
+
+
     .message-row img {
         border-radius: 100%;
         height: 30px;
@@ -680,118 +712,317 @@ h3 {
 
 
 }
+
 @media only screen and (max-height: 690px) {
-    
-    #chat-container{
+
+    #chat-container {
         display: grid;
         grid:
-            'comand-line head-line'0.205fr
-             'search-container chat-message-list'0.15fr
-             'conversation-list chat-message-list' 60vh 
-             'conversation-list chat-form'120px /24.5vw 74.5vw;
-        }
-     
+            'comand-line head-line'0.205fr 'search-container chat-message-list'0.15fr 'conversation-list chat-message-list'60vh 'conversation-list chat-form'120px /24.5vw 74.5vw;
+        margin-bottom: 28px;
+        height: 660;
     }
-    
-    @media only screen and (max-width: 690px) {
 
-        #chat-form {
-            display: grid;
-            grid:
-            'me  chat smily other'15px 
-            'me  chat smily other'45px 
-            'symb symb symb symb '60px 
-                / 35px 1fr 35px;
-            align-content: start;
-            align-items: start;
-            grid-area: chat-form;
-            background: white;
-        }
-            .symb {
-                grid-area: symb;
-                border-top: 1px solid rgb(52, 198, 235);
-                margin-bottom: 20px;
-                margin-left: 150px;
-                display: flex;
-                width: 250px;
-                background: white;
-                border-top: 1.5px solid rgb(44, 188, 207);
-         } }
+}
 
-         @media only screen and (min-width: 1300px) {
-    
-            #chat-container{
-                display: grid;
-                grid:
-                    'comand-line head-line'0.205fr
-                     'search-container chat-message-list'0.15fr
-                     'conversation-list chat-message-list' 65vh 
-                     'conversation-list chat-form'130px /0.9fr 2.1fr;
-                     margin-bottom: 28pxpx;
-                  
-    
-                }
-                #chat-form {
-                    display: grid;
-                    grid:
-                        'me  chat smily other'20px 
-                        'me  chat smily other'30px 
-                        'symb symb symb symb '70px 
-                        / 1fr 2fr 30px 1fr;
-                    align-content: start;
-                    align-items: start;
-                    grid-area: chat-form;
-                    background: white;
-                
-                
-    
-                }
-                #chat-form input {
-                    outline: none;
-                    grid-area: chat;
-                    border: 2px solid white;
-                    color: #330;
-                    width: 300px;
-                    height: 40px;
-                    font-size: 1rem;
-                    margin-bottom: 15px;
-                
-                }
+@media only screen and (max-width: 690px) {
+    #chat-container {
+        display: grid;
+        grid:
+            'comand-line head-line'0.205fr 'search-container chat-message-list'0.15fr 'conversation-list chat-message-list'65vh 'conversation-list chat-form'130px /0.9fr 2.1fr;
+        margin-bottom: 28pxpx;
+
+
+    }
+
+    #chat-form {
+        display: grid;
+        grid:
+            'me  chat smily other'15px 'me  chat smily other'45px 'symb symb symb symb '60px / 35px 1fr 35px;
+        align-content: start;
+        align-items: start;
+        grid-area: chat-form;
+        background: white;
+    }
+
+    .symb {
+        grid-area: symb;
+        border-top: 1px solid rgb(52, 198, 235);
+        margin-bottom: 20px;
+        margin-left: 150px;
+        display: flex;
+        width: 250px;
+        background: white;
+        border-top: 1.5px solid rgb(44, 188, 207);
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+
+    #chat-container {
+        display: grid;
+        grid:
+            'comand-line head-line'47px 'search-container chat-message-list'0.2fr 'conversation-list chat-message-list'65vh 'conversation-list chat-form'90px /0.9fr 2.1fr;
+        margin-bottom: 28pxpx;
+        width: 1010px;
+
+
+    }
+
+    #chat-form {
+        display: grid;
+        grid:
+            'me  chat smily other'20px 'me  chat smily other'30px 'symb symb symb symb '40px / 1fr 2fr 30px 1fr;
+        align-content: start;
+        align-items: start;
+        grid-area: chat-form;
+        background: white;
+
+
+
+    }
+
+    #chat-form input {
+        outline: none;
+        grid-area: chat;
+        border: 2px solid white;
+        color: #330;
+        width: 300px;
+        height: 40px;
+        font-size: 1rem;
+        margin-bottom: 15px;
+
+    }
+
+
+
+
+
+    #head-line {
+        display: grid;
+        grid-template-columns: 0.1fr 1.5fr 45px 45px;
+        grid-area: head-line;
+        background: rgb(86, 130, 163);
+        align-items: center;
+        color: white;
+        box-shadow: 0 0.2vw 0 -0.2vw rgba(0, 0, 0, 0.75);
+
+    }
+
+    .message-content {
+        display: grid;
+        grid-template-columns: 140px 395px 90px;
+        grid-auto-flow: row;
+    }
+
+    .symb {
+        grid-area: symb;
+        border-top: 1px solid rgb(52, 198, 235);
+        margin-bottom: 20px;
+        margin-left: 150px;
+        display: flex;
+        width: 390px;
+        background: white;
+        border-top: 1.5px solid rgb(44, 188, 207);
+    }
+
+}
+
+@media only screen and (min-height: 900px) {
+    #chat-container {
+        display: grid;
+        grid:
+            'comand-line head-line'0.2fr 'search-container chat-message-list'0.15fr 'conversation-list chat-message-list'2fr 'conversation-list chat-form'140px /0.5fr 1.5fr;
+
+        width: 1010px;
+        height: 870px;
+        margin-bottom: 28px;
+
+
+    }
+
+    #chat-form {
+        display: grid;
+        grid:
+            'me  chat smily other'15px 'me  chat smily other'45px 'symb symb symb symb '60px / 150px 380px 20px 35px;
+        align-content: start;
+        align-items: start;
+        grid-area: chat-form;
+        background: white;
+    }
+
+    .symb {
+        grid-area: symb;
+        border-top: 1px solid rgb(52, 198, 235);
+        margin-bottom: 20px;
+        margin-left: 150px;
+        display: flex;
+        width: 390px;
+        background: white;
+        border-top: 1.5px solid rgb(44, 188, 207);
+    }
+}
+
+
+@media only screen and (min-height: 800px) {
+    #chat-container {
+        display: grid;
+        grid:
+            'comand-line head-line'0.18fr 'search-container chat-message-list'0.15fr 'conversation-list chat-message-list'2fr 'conversation-list chat-form'140px /0.5fr 1.5fr;
+
+        width: 1010px;
+        height: 770px;
+        margin-bottom: 28px;
+
+
+    }
+
+    #chat-form {
+        display: grid;
+        grid:
+            'me  chat smily other'15px 'me  chat smily other'45px 'symb symb symb symb '60px / 150px 380px 20px 35px;
+        align-content: start;
+        align-items: start;
+        grid-area: chat-form;
+        background: white;
+    }
+
+    .symb {
+        grid-area: symb;
+        border-top: 1px solid rgb(52, 198, 235);
+        margin-bottom: 20px;
+        margin-left: 150px;
+        display: flex;
+        width: 390px;
+        background: white;
+        border-top: 1.5px solid rgb(44, 188, 207);
+    }
+}
+
+@media only screen and (min-height: 950px) {
+    #chat-container {
+        display: grid;
+        grid:
+            'comand-line head-line'0.18fr 'search-container chat-message-list'0.15fr 'conversation-list chat-message-list'2fr 'conversation-list chat-form'140px /0.5fr 1.5fr;
+
+        width: 1010px;
+        height: 920px;
+        margin-bottom: 28px;
+
+
+    }
+
+    #chat-form {
+        display: grid;
+        grid:
+            'me  chat smily other'15px 'me  chat smily other'45px 'symb symb symb symb '60px / 150px 380px 20px 35px;
+        align-content: start;
+        align-items: start;
+        grid-area: chat-form;
+        background: white;
+    }
+
+    .symb {
+        grid-area: symb;
+        border-top: 1px solid rgb(52, 198, 235);
+        margin-bottom: 20px;
+        margin-left: 150px;
+        display: flex;
+        width: 390px;
+        background: white;
+        border-top: 1.5px solid rgb(44, 188, 207);
+    }
+}
+
+
+@media only screen and (min-height: 1024px) and (min-width:768px){
+    #chat-container {
+        display: grid;
+        grid:
+            'comand-line head-line'0.17fr
+             'search-container chat-message-list'0.15fr 
+             'conversation-list chat-message-list'2fr 
+             'conversation-list chat-form'140px /0.7fr 1.65fr;
+
+        width: 768px;
+        height: 1024px;
      
-             
-          
 
 
-         #head-line {
-            display: grid;
-            grid-template-columns: 0.1fr 1.5fr  45px 45px;
-            grid-area: head-line;
-            background: rgb(86, 130, 163);
-            align-items: center;
-            color: white;
-            box-shadow: 0 0.2vw 0 -0.2vw rgba(0, 0, 0, 0.75);
-        
-        }    
-        .message-content {
-            display: grid;
-            grid-template-columns: 140px 395px 90px;
-            grid-auto-flow: row;
-        }   
+    }
 
-        .symb {
-            grid-area: symb;
-            border-top: 1px solid rgb(52, 198, 235);
-            margin-bottom: 20px;
-            margin-left: 150px;
-            display: flex;
-            width: 390px;
-            background: white;
-            border-top: 1.5px solid rgb(44, 188, 207);}
+    #chat-form {
+        display: grid;
+        grid:
+            'me  chat smily other'15px
+             'me  chat smily other'45px
+              'symb symb symb symb '60px / 80px 0.9fr 20px 75px;
+        align-content: start;
+        align-items: start;
+        grid-area: chat-form;
+        background: white;
+    }
+
+    .symb {
+        grid-area: symb;
+        border-top: 1px solid rgb(52, 198, 235);
+        margin-bottom: 20px;
+        margin-left: 90px;
+        display: flex;
+        width: 320px;
+        background: white;
+        border-top: 1.5px solid rgb(44, 188, 207);
+    }
+    #chat-form input {
+        outline: none;
+        grid-area: chat;
+        border: 2px solid white;
+        color: #330;
+        width: 240px;
+        height: 45px;
+        font-size: 1rem;
     
-         }
+    }
+    .message-content {
+        display: grid;
+        grid-template-columns: 120px 1fr 100px;
+        grid-auto-flow: row;
+    }
+    .message-row img {
+        border-radius: 100%;
+        height: 45px;
+        width: 45px;
+        margin-left: 25px;
     
+    }
+    .conversation {
+        display: grid;
+        grid-template-columns: 50px 1.6fr 64px;
+        grid-template-rows: 24px 39px;
+        color: rgb(114, 106, 106);
+        font-size: 1.1rem;
+        height: 63px;
+        align-content: center;
+        border-right: 2px solid rgba(227, 233, 238, 0.93);
+        padding: 20px 20px 20px 15px;
+    }
+    .me {
 
+        grid-area: me;
+        height: 50px;
+        width: 50px;
+        border-radius: 100%;
+        margin-left: 30px;
+        margin-top: 15px;
+    }
+    .other {
 
-
-
+        grid-area: other;
+        height: 50px;
+        width: 50px;
+        border-radius: 100%;
+        margin-left: 20px;
+        margin-top: 15px;
     
+    }
+}
