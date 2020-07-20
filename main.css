@@ -294,7 +294,7 @@ h3 {
 
 .conversation {
     display: grid;
-    grid-template-columns: 60px 1fr 64px;
+    grid-template-columns: 60px 1fr 50px;
     grid-template-rows: 24px 39px;
     color: rgb(114, 106, 106);
     font-size: 1.1rem;
@@ -997,7 +997,7 @@ h3 {
     }
     .conversation {
         display: grid;
-        grid-template-columns: 50px 1.6fr 64px;
+        grid-template-columns: 50px 1.6fr 50px;
         grid-template-rows: 24px 39px;
         color: rgb(114, 106, 106);
         font-size: 1.1rem;
