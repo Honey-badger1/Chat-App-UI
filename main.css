@@ -260,10 +260,11 @@ h3 {
 #chat-container {
     display: grid;
     grid:
-        'comand-line head-line'0.24fr 
-        'search-container chat-message-list'0.18fr 
-        'conversation-list chat-message-list'1.5fr
-        'conversation-list chat-form'0.4fr /0.5fr 1.5fr;
+        'comand-line head-line'47px 
+        'search-container chat-message-list'
+        0.24fr 'conversation-list chat-message-list'
+        2fr 'conversation-list chat-form'0.48fr /0.9fr 2.1fr;
+   margin-bottom: 28px;
 
     width: 1010px;
     height: 700px;
@@ -300,7 +301,7 @@ h3 {
 .conversation {
     display: grid;
     width: 100%;
-    grid-template-columns: 65px 1.2fr 65px;
+    grid-template-columns: 65px 1.2fr 55px;
     grid-template-rows: 27px 36px;
     color: rgb(114, 106, 106);
     font-size: 1.1rem;
@@ -393,7 +394,7 @@ h3 {
     border-radius: 2px;
     height: 35px;
     border: 0;
-    width: 290px;
+    width: 1fr;
     padding-left: 35px;
     font-size: 1.4rem;
     background: url('img/search.png') no-repeat rgba(197, 201, 202, 0.3);
@@ -442,7 +443,7 @@ h3 {
 
 .message-content {
     display: grid;
-    grid-template-columns: 140px 1fr 130px;
+    grid-template-columns:140px 395px 90px;
     grid-auto-flow: row;
 }
 
@@ -467,7 +468,7 @@ h3 {
 }
 
 .message-text {
-    padding: 14px 20px;
+    padding: 14pxvw 20px;
     font-size: 1.1rem;
     margin-bottom: 5px;
 }
@@ -537,9 +538,10 @@ h3 {
 #chat-form {
     display: grid;
     grid:
-        'me  chat smily other'60px 'symb symb symb symb '70px / 0.6fr 1fr 30px 0.5fr;
+        'me  chat smily other'60px 'symb symb symb symb '70px
+         / 0.5fr 1fr 20px 0.5fr;
     align-content: start;
-    align-items: start;
+    place-items: start;
     grid-area: chat-form;
     background: white;
 
@@ -572,8 +574,8 @@ h3 {
     height: 50px;
     width: 50px;
     border-radius: 100%;
-    margin-left: 80px;
-    margin-top: 5px;
+    margin-left: 90px;
+    margin-top: 10px;
 }
 
 .other {
@@ -582,8 +584,8 @@ h3 {
     height: 50px;
     width: 50px;
     border-radius: 100%;
-    margin-left: 30px;
-    margin-top: 5px;
+    margin-left: 35px;
+    margin-top: 10px;
 
 }
 
@@ -591,9 +593,10 @@ h3 {
 #chat-form input {
     outline: none;
     grid-area: chat;
+    text-align: start;
     border: 2px solid white;
     color: #330;
-    width: 350px;
+    width: 300px;
     height: 45px;
     font-size: 1rem;
 
@@ -642,9 +645,9 @@ h3 {
     grid-area: symb;
     border-top: 1px solid rgb(52, 198, 235);
     margin-bottom: 20px;
-    margin-left: 150px;
+    margin-left: 160px;
     display: flex;
-    width: 390px;
+    width: 380px;
     background: white;
     border-top: 1.5px solid rgb(44, 188, 207);
 }
@@ -667,9 +670,9 @@ h3 {
     #chat-container {
         display: grid;
         grid:
-            'comand-line head-line'0.205fr
+            'comand-line head-line'47px
              'search-container chat-message-list'0.15fr 
-             'conversation-list chat-message-list'70vh
+             'conversation-list chat-message-list'2fr
               'conversation-list chat-form'130px /24.5vw 74.5vw;
 
     }
@@ -679,388 +682,126 @@ h3 {
         grid-template-columns: 20vw 34.5vw 20vw;
         grid-auto-flow: row;
     }
-
-    #search-container input {
-        color: #ccc;
-        outline: none;
-        font-weight: bold;
-        border-radius: 2px;
-        height: 35px;
-        border: 0;
-        width: 22.5vw;
-        padding-left: 35px;
-        font-size: 1.4rem;
-        background: url('img/search.png') no-repeat rgba(197, 201, 202, 0.3);
-        background-position: 15px center;
-        background-size: 20px 20px;
-    }
-
-    .smile {
-
-        height: 30px;
-        width: 30px;
-        display: none;
-        margin-right: 1vw;
-    }
-
-    .heart {
-        display: none;
-    }
-
-
-
-  
-
-    .message-row>img {
-        margin-left: 30px;
-    }
-
-
-
-
-   
-
-
-
-}
-
-@media only screen and (max-height: 690px) {
-
-    #chat-container {
-        display: grid;
-        grid:
-            'comand-line head-line'0.205fr 
-            'search-container chat-message-list'0.15fr 
-            'conversation-list chat-message-list'1.5fr
-             'conversation-list chat-form'120px /24.5vw 74.5vw;
-        
-        height: 660;
-    }
-
-}
-
-@media only screen and (max-width: 690px) {
-    #chat-container {
-        display: grid;
-        grid:
-            'comand-line head-line'0.205fr 
-            'search-container chat-message-list'
-            0.15fr 'conversation-list chat-message-list'50vh 'conversation-list chat-form'130px /24vw 76vw;
-        height:630px;
-
-
-    }
-
+    
     #chat-form {
         display: grid;
         grid:
-            'me  chat smily other'15px 'me  chat smily other'45px 'symb symb symb symb '60px / 35px 1fr 35px;
-        align-content: start;
-        align-items: start;
-        grid-area: chat-form;
-        background: white;
+            'me  chat smily other'60px 'symb symb symb symb '70px
+             / 0.5fr 1fr 20px 0.5fr;
     }
-
     .symb {
-        grid-area: symb;
-        border-top: 1px solid rgb(52, 198, 235);
-        margin-bottom: 20px;
-        margin-left: 150px;
-        display: flex;
-        width: 250px;
-        background: white;
-        border-top: 1.5px solid rgb(44, 188, 207);
-    }
-}
 
-@media only screen and (min-width: 1300px) {
-
-    #chat-container {
-        display: grid;
-        grid:
-            'comand-line head-line'48px
-             'search-container chat-message-list'
-             0.24fr 'conversation-list chat-message-list'
-             2fr 'conversation-list chat-form'130px /0.9fr 2.1fr;
-   
-        width: 1010px;
-       
-
-
-    }
-
-    #chat-form {
-        display: grid;
-        grid:
-            'me  chat smily other'20px 'me  chat smily other'30px 'symb symb symb symb '40px / 1fr 2fr 30px 1fr;
-        align-content: start;
-        align-items: start;
-        grid-area: chat-form;
-        background: white;
-
-
-
-    }
-
-    #chat-form input {
-        outline: none;
-        grid-area: chat;
-        border: 2px solid white;
-        color: #330;
-        width: 300px;
-        height: 40px;
-        font-size: 1rem;
-        margin-bottom: 15px;
-
+        width: 45vw;
     }
 
 
+  }
 
-
-
-    #head-line {
-        display: grid;
-        grid-template-columns: 0.1fr 1.4fr 50px 50px;
-        grid-area: head-line;
-        background: rgb(86, 130, 163);
-        align-items: center;
-        color: white;
-        box-shadow: 0 0.2vw 0 -0.2vw rgba(0, 0, 0, 0.75);
-
-    }
-
-    .message-content {
-        display: grid;
-        grid-template-columns: 140px 395px 90px;
-        grid-auto-flow: row;
-    }
-
-    .symb {
-        grid-area: symb;
-        border-top: 1px solid rgb(52, 198, 235);
-        margin-bottom: 20px;
-        margin-left: 150px;
-        display: flex;
-        width: 390px;
-        background: white;
-        border-top: 1.5px solid rgb(44, 188, 207);
-    }
-
-}
-
-@media only screen and (min-height: 900px) {
-    #chat-container {
-        display: grid;
-        grid:
-            'comand-line head-line'0.2fr 'search-container chat-message-list'0.15fr 'conversation-list chat-message-list'2fr 'conversation-list chat-form'140px /0.5fr 1.5fr;
-
-        width: 1010px;
-        height: 870px;
-       
-
-
-    }
-
-    #chat-form {
-        display: grid;
-        grid:
-            'me  chat smily other'15px 'me  chat smily other'45px 'symb symb symb symb '60px / 150px 380px 20px 35px;
-        align-content: start;
-        align-items: start;
-        grid-area: chat-form;
-        background: white;
-    }
-
-    .symb {
-        grid-area: symb;
-        border-top: 1px solid rgb(52, 198, 235);
-        margin-bottom: 20px;
-        margin-left: 150px;
-        display: flex;
-        width: 390px;
-        background: white;
-        border-top: 1.5px solid rgb(44, 188, 207);
-    }
-}
-
-
-@media only screen and (min-height: 800px) {
-    #chat-container {
-        display: grid;
-        grid:
-            'comand-line head-line'0.18fr 'search-container chat-message-list'0.15fr 'conversation-list chat-message-list'2fr 'conversation-list chat-form'140px /0.5fr 1.5fr;
-
-        width: 1010px;
-        height: 770px;
-        
-
-
-    }
-
-    #chat-form {
-        display: grid;
-        grid:
-            'me  chat smily other'15px 'me  chat smily other'45px 'symb symb symb symb '60px / 150px 380px 20px 35px;
-        align-content: start;
-        align-items: start;
-        grid-area: chat-form;
-        background: white;
-    }
-
-    .symb {
-        grid-area: symb;
-        border-top: 1px solid rgb(52, 198, 235);
-        margin-bottom: 20px;
-        margin-left: 150px;
-        display: flex;
-        width: 390px;
-        background: white;
-        border-top: 1.5px solid rgb(44, 188, 207);
-    }
-}
-
-@media only screen and (min-height: 950px) {
-    #chat-container {
-        display: grid;
-        grid:
-            'comand-line head-line'0.18fr 'search-container chat-message-list'0.15fr 'conversation-list chat-message-list'2fr 'conversation-list chat-form'140px /0.5fr 1.5fr;
-
-        width: 1010px;
-        height: 920px;
-       
-
-
-    }
-
-    #chat-form {
-        display: grid;
-        grid:
-            'me  chat smily other'15px 'me  chat smily other'45px 'symb symb symb symb '60px / 150px 380px 20px 35px;
-        align-content: start;
-        align-items: start;
-        grid-area: chat-form;
-        background: white;
-    }
-
-    .symb {
-        grid-area: symb;
-        border-top: 1px solid rgb(52, 198, 235);
-        margin-bottom: 20px;
-        margin-left: 150px;
-        display: flex;
-        width: 390px;
-        background: white;
-        border-top: 1.5px solid rgb(44, 188, 207);
-    }
-}
-
-
-@media only screen and (min-height: 1024px) and (min-width:768px){
-    #chat-container {
-        display: grid;
-        grid:
-            'comand-line head-line'0.17fr
-             'search-container chat-message-list'0.15fr 
-             'conversation-list chat-message-list'2fr 
-             'conversation-list chat-form'140px /0.7fr 1.65fr;
-
-        width: 768px;
-        height: 1024px;
+    @media only screen and (max-width: 900px) {
+        .smile{
+            display: none;
+        }
+        .me{
+            margin-left: 50px;
+        }
      
-
-
-    }
-
-    #chat-form {
-        display: grid;
-        grid:
-            'me  chat smily other'60px
-              'symb symb symb symb '70px / 80px 0.9fr 20px 75px;
-        align-content: start;
-        align-items: start;
-        grid-area: chat-form;
-        background: white;
-    }
-
-    .symb {
-        grid-area: symb;
-        border-top: 1px solid rgb(52, 198, 235);
-        margin-bottom: 20px;
-        margin-left: 90px;
-        display: flex;
-        width: 320px;
-        background: white;
-        border-top: 1.5px solid rgb(44, 188, 207);
-    }
-    #chat-form input {
-        outline: none;
-        grid-area: chat;
-        border: 2px solid white;
-        color: #330;
-        width: 240px;
-        height: 45px;
-        font-size: 1rem;
-    
-    }
-    .message-content {
-        display: grid;
-        grid-template-columns: 120px 1fr 100px;
-        grid-auto-flow: row;
-    }
-    .message-row img {
-        border-radius: 100%;
-        height: 45px;
-        width: 45px;
-        margin-left: 25px;
-    
-    }
-    .conversation {
-        display: grid;
-        grid-template-columns: 55px 1.6fr 65px;
-        grid-template-rows: 24px 39px;
-        color: rgb(114, 106, 106);
-        font-size: 1.1rem;
-        height: 63px;
-        align-content: center;
-        border-right: 2px solid rgba(227, 233, 238, 0.93);
-        padding: 20px 20px 20px 15px;
-    }
-    .me {
-
-        grid-area: me;
-        height: 50px;
-        width: 50px;
-        border-radius: 100%;
-        margin-left: 30px;
-        margin-top: 15px;
-    }
-    .other {
-
-        grid-area: other;
-        height: 50px;
-        width: 50px;
-        border-radius: 100%;
-        margin-left: 20px;
-        margin-top: 15px;
-    
-    }
+   .symb{margin-left: 120px;} 
+   #search-container input{
+       width: 20vw;
+   }
+   #chat-form {
+    display: grid;
+    grid:
+        'me  chat smily other'60px 'symb symb symb symb '70px
+         / 0.3fr 0.7fr 20px 0.3fr;
 }
-@media only screen and (max-width: 1050px) {
-
-    #chat-container {
-        display: grid;
-        grid:
-            'comand-line head-line'0.205fr
-             'search-container chat-message-list'0.15fr 
-             'conversation-list chat-message-list'70vh
-              'conversation-list chat-form'130px /24.5vw 74.5vw;
-
-    }
-
-    .message-content {
-        display: grid;
-        grid-template-columns: 20vw 34.5vw 20vw;
-        grid-auto-flow: row;
-    }
-
+.heart {
+    display: none;
 }
+
+#chat-form input {
+    width: 250px;
+    }}
+
+    @media only screen and (min-height: 1024px) and (min-width:768px){
+        #chat-container {
+            display: grid;
+            grid:
+                'comand-line head-line'0.17fr
+                 'search-container chat-message-list'0.15fr 
+                 'conversation-list chat-message-list'2fr 
+                 'conversation-list chat-form'140px /0.7fr 1.65fr;
+    
+            width: 768px;
+            height: 1024px;
+         
+    
+    
+        }
+    
+    }
+    @media only screen and (min-height: 900px) {
+        #chat-container {
+                display: grid;
+                grid:
+                    'comand-line head-line'47px 
+                    'search-container chat-message-list'
+                    0.24fr 'conversation-list chat-message-list'
+                    2fr 'conversation-list chat-form'0.48fr /0.9fr 2.1fr;
+            width: 1010px;
+            height: 870px;
+            margin-bottom: 30px;
+        }
+    }
+    
+    
+    @media only screen and (min-height: 800px) {
+        #chat-container {
+            display: grid;
+            grid:
+                'comand-line head-line'47px 
+                'search-container chat-message-list'
+                0.24fr 'conversation-list chat-message-list'
+                2fr 'conversation-list chat-form'0.48fr /0.9fr 2.1fr;
+            width: 1010px;
+            height: 770px;
+            margin-bottom: 28px;
+    
+    
+        }
+    
+    }
+    
+    @media only screen and (min-height: 950px) {
+        #chat-container {
+            display: grid;
+            grid:
+                'comand-line head-line'47px 
+                'search-container chat-message-list'
+                0.24fr 'conversation-list chat-message-list'
+                2fr 'conversation-list chat-form'0.48fr /0.9fr 2.1fr;
+            width: 1010px;
+            height: 920px;
+            margin-bottom: 30px;
+           
+    
+    
+        }
+
+        
+    }
+    
+    @media only screen and (max-height: 690px) {
+
+        #chat-container {
+            display: grid;
+            grid:
+                'comand-line head-line'47px
+                'search-container chat-message-list'47px
+             'conversation-list chat-message-list'50vh
+            'conversation-list chat-form'110px /0.9fr 2.1fr;
+            margin-bottom: 28px;
+            height: 660;
+        }
+    
+    }
