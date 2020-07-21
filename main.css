@@ -16,14 +16,12 @@ html {
     font-size: 12px;
 }
 
-#conversation-list:hover {
-    overflow-y: scroll;
-}
+
 
 #conversation-list::-webkit-scrollbar {
 
     width: 3px;
-    background-color: rgb(230, 241, 245);
+    background-color: rgba(227, 233, 238, 0.93);
 }
 
 #conversation-list::-webkit-scrollbar-thumb {
@@ -39,8 +37,9 @@ html {
 #chat-message-list::-webkit-scrollbar {
     width: 10px;
     margin-right: 10px;
-    background-color: rgb(230, 241, 245);
-}
+    position: relative;
+    background-color:rgba(227, 233, 238, 0.93);}
+
 
 #chat-message-list::-webkit-scrollbar-thumb {
     box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 6px inset;
@@ -74,7 +73,7 @@ body {
 
 #head-line {
     display: grid;
-    grid-template-columns: 0.1fr 1.5fr 45px 45px;
+    grid-template-columns: 0.1fr 1.4fr 50px 50px;
     grid-area: head-line;
     background: rgb(86, 130, 163);
     align-items: center;
@@ -95,18 +94,18 @@ body {
 
 .status {
     font-size: 13px;
-    color: white;
+    color: rgb(208, 210, 214);
     text-align: start;
     font-weight: 200;
-    margin-top: 4px;
+    margin-top: 3px;
 }
 
 .ldropbtn {
     display: inline-block;
     background-color: rgb(86, 130, 163);
     color: #ffffff;
-    width: 45px;
-    height: 44px;
+    width: 50px;
+    height: 45px;
 
     border: none;
     z-index: 2;
@@ -123,8 +122,8 @@ body {
 .search {
     display: inline-block;
     background-color: rgb(86, 130, 163);
-    width: 45px;
-    height: 44px;
+    width: 50px;
+    height: 45px;
     color: white;
     border: none;
     z-index: 0;
@@ -138,18 +137,20 @@ body {
 .head {
     color: white;
     outline: none;
-    margin-right: 10px;
+    margin-right: 8px;
     border: 0;
     font-size: 1.2rem;
-    font-weight: 600;
-    text-align: end;
+    font-weight: 700;
+    text-align: start;
+    margin-left: 18px;
 
 }
 
 
 .search>img {
-    height: 18px;
-    width: 18px;
+    height: 17px;
+    width: 17px;
+    margin-top: 3px;
 }
 
 .dropbtn>img {
@@ -258,7 +259,10 @@ h3 {
 #chat-container {
     display: grid;
     grid:
-        'comand-line head-line'0.24fr 'search-container chat-message-list'0.18fr 'conversation-list chat-message-list'2fr 'conversation-list chat-form'0.48fr /0.5fr 1.5fr;
+        'comand-line head-line'0.24fr 
+        'search-container chat-message-list'0.18fr 
+        'conversation-list chat-message-list'1.5fr
+        'conversation-list chat-form'0.4fr /0.5fr 1.5fr;
 
     width: 1010px;
     height: 700px;
@@ -266,7 +270,7 @@ h3 {
     background: #FFF;
     overflow: hidden;
     margin-bottom: 28px;
-    max-height: 100%;
+    
 
 
 }
@@ -286,21 +290,22 @@ h3 {
 
 #conversation-list {
     grid-area: conversation-list;
-
-    overflow: hidden;
+    overflow-y: scroll;
+    overflow-x: hidden;
 
 
 }
 
 .conversation {
     display: grid;
-    grid-template-columns: 60px 1fr 67px;
+    width: 100%;
+    grid-template-columns: 65px 1.2fr 55px;
     grid-template-rows: 27px 36px;
     color: rgb(114, 106, 106);
     font-size: 1.1rem;
     height: 63px;
     align-content: center;
-    border-right: 2px solid rgba(227, 233, 238, 0.93);
+    
     padding: 20px 20px 20px 15px;
 }
 
@@ -308,20 +313,21 @@ h3 {
 
  p{
    
-    font-size: 12px;
-    margin-left: 7px;
+    font-size: 11px;
     color: white;
+    margin-top: 3px;
    
   
 }
 .unread{
 
    background: url('img/circle.png')center center no-repeat;;
-   width: 20px;
-   height: 20px;
+   width: 23px;
+   height: 23px;
+   text-align: center;
    border-radius:100%;
-   margin-top: 8px;
    margin-left:35px ;
+   margin-top: 6px;
   
 
 }
@@ -366,11 +372,12 @@ h3 {
     display: grid;
     align-items: center;
     padding: 0 10px;
-    height: 57px;
+    height: 58px;
     place-items: center;
     grid-area: search-container;
     box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 0.75);
     z-index: 1;
+    border-right:2px solid rgba(227, 233, 238, 0.93);
 }
 
 #search-container input:active {
@@ -507,7 +514,7 @@ h3 {
 .title-text:active {
     font-size: 14px;
     font-weight: bold;
-    color: white;
+    
 }
 
 .conversation-message {
@@ -764,8 +771,11 @@ h3 {
     #chat-container {
         display: grid;
         grid:
-            'comand-line head-line'48px 'search-container chat-message-list'0.24fr 'conversation-list chat-message-list'65vh 'conversation-list chat-form'90px /0.9fr 2.1fr;
-        margin-bottom: 28pxpx;
+            'comand-line head-line'48px
+             'search-container chat-message-list'
+             0.24fr 'conversation-list chat-message-list'
+             2fr 'conversation-list chat-form'0.48fr /0.9fr 2.1fr;
+        margin-bottom: 28px;
         width: 1010px;
 
 
@@ -802,7 +812,7 @@ h3 {
 
     #head-line {
         display: grid;
-        grid-template-columns: 0.1fr 1.5fr 45px 45px;
+        grid-template-columns: 0.1fr 1.4fr 50px 50px;
         grid-area: head-line;
         background: rgb(86, 130, 163);
         align-items: center;
@@ -998,7 +1008,7 @@ h3 {
     }
     .conversation {
         display: grid;
-        grid-template-columns: 50px 1.6fr 65px;
+        grid-template-columns: 55px 1.6fr 55px;
         grid-template-rows: 24px 39px;
         color: rgb(114, 106, 106);
         font-size: 1.1rem;
