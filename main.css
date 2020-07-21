@@ -261,9 +261,9 @@ h3 {
     display: grid;
     grid:
         'comand-line head-line'47px 
-        'search-container chat-message-list'
-        0.24fr 'conversation-list chat-message-list'
-        2fr 'conversation-list chat-form'0.48fr /0.9fr 2.1fr;
+        'search-container chat-message-list'58px
+        'conversation-list chat-message-list'
+        2fr 'conversation-list chat-form'0.48fr /0.95fr 2.1fr;
    margin-bottom: 28px;
 
     width: 1010px;
@@ -301,7 +301,7 @@ h3 {
 .conversation {
     display: grid;
     width: 100%;
-    grid-template-columns: 65px 1.2fr 55px;
+    grid-template-columns: 65px 1.3fr 65px;
     grid-template-rows: 27px 36px;
     color: rgb(114, 106, 106);
     font-size: 1.1rem;
@@ -394,7 +394,7 @@ h3 {
     border-radius: 2px;
     height: 35px;
     border: 0;
-    width: 1fr;
+    width: 290px;
     padding-left: 35px;
     font-size: 1.4rem;
     background: url('img/search.png') no-repeat rgba(197, 201, 202, 0.3);
@@ -558,8 +558,8 @@ h3 {
 
 
 .smily {
-    height: 22px;
-    width: 22px;
+    height: 19px;
+    width: 19px;
     margin-top: 10px;
     margin-left: 10px;
 
@@ -633,6 +633,9 @@ h3 {
 }
 
 .date{
+     
+    width: 2fr;
+
     text-align:center ;
     color: rgb(172, 170, 170);
     font-size: 1.1rem;
@@ -673,7 +676,7 @@ h3 {
             'comand-line head-line'47px
              'search-container chat-message-list'0.15fr 
              'conversation-list chat-message-list'2fr
-              'conversation-list chat-form'130px /24.5vw 74.5vw;
+              'conversation-list chat-form'130px /30vw 70vw;
 
     }
 
@@ -682,7 +685,8 @@ h3 {
         grid-template-columns: 20vw 34.5vw 20vw;
         grid-auto-flow: row;
     }
-    
+    #search-container input{
+        width: 27vw;}
     #chat-form {
         display: grid;
         grid:
@@ -707,7 +711,7 @@ h3 {
      
    .symb{margin-left: 120px;} 
    #search-container input{
-       width: 20vw;
+       width: 27vw;
    }
    #chat-form {
     display: grid;
@@ -723,54 +727,7 @@ h3 {
     width: 250px;
     }}
 
-    @media only screen and (min-height: 1024px) and (min-width:768px){
-        #chat-container {
-            display: grid;
-            grid:
-                'comand-line head-line'0.17fr
-                 'search-container chat-message-list'0.15fr 
-                 'conversation-list chat-message-list'2fr 
-                 'conversation-list chat-form'140px /0.7fr 1.65fr;
-    
-            width: 768px;
-            height: 1024px;
-         
-    
-    
-        }
-    
-    }
-    @media only screen and (min-height: 900px) {
-        #chat-container {
-                display: grid;
-                grid:
-                    'comand-line head-line'47px 
-                    'search-container chat-message-list'
-                    0.24fr 'conversation-list chat-message-list'
-                    2fr 'conversation-list chat-form'0.48fr /0.9fr 2.1fr;
-            width: 1010px;
-            height: 870px;
-            margin-bottom: 30px;
-        }
-    }
-    
-    
-    @media only screen and (min-height: 800px) {
-        #chat-container {
-            display: grid;
-            grid:
-                'comand-line head-line'47px 
-                'search-container chat-message-list'
-                0.24fr 'conversation-list chat-message-list'
-                2fr 'conversation-list chat-form'0.48fr /0.9fr 2.1fr;
-            width: 1010px;
-            height: 770px;
-            margin-bottom: 28px;
-    
-    
-        }
-    
-    }
+  
     
     @media only screen and (min-height: 950px) {
         #chat-container {
@@ -791,17 +748,76 @@ h3 {
         
     }
     
-    @media only screen and (max-height: 690px) {
-
+    @media only screen and (min-height: 800px) {
         #chat-container {
             display: grid;
             grid:
-                'comand-line head-line'47px
-                'search-container chat-message-list'47px
-             'conversation-list chat-message-list'50vh
-            'conversation-list chat-form'110px /0.9fr 2.1fr;
+                'comand-line head-line'47px 
+                'search-container chat-message-list'
+                0.24fr 'conversation-list chat-message-list'
+                2fr 'conversation-list chat-form'0.48fr /0.9fr 2.1fr;
+            height: 770px;
             margin-bottom: 28px;
-            height: 660;
-        }
     
-    }
+    
+        }}
+        @media only screen and (min-height: 900px) {
+            #chat-container {
+                display: grid;
+                grid:
+                    'comand-line head-line'47px 
+                    'search-container chat-message-list'
+                    0.24fr 'conversation-list chat-message-list'
+                    2fr 'conversation-list chat-form'0.48fr /0.9fr 2.1fr;
+                height: 870px;
+                margin-bottom: 30px;
+        
+        
+            }
+        }
+
+
+        @media only screen and (max-height: 600px) {
+            #chat-container {
+                display: grid;
+                grid:
+                    'comand-line head-line'47px 
+                    'search-container chat-message-list'
+                    0.24fr 'conversation-list chat-message-list'
+                    2fr 'conversation-list chat-form'0.48fr /0.9fr 2.1fr;
+                height: 570px;
+                margin-bottom: 30px;
+        
+        
+            }
+        }
+        @media only screen and (max-height: 500px) {
+            #chat-container {
+                display: grid;
+                grid:
+                    'comand-line head-line'47px 
+                    'search-container chat-message-list'
+                    0.24fr 'conversation-list chat-message-list'
+                    2fr 'conversation-list chat-form'0.48fr /0.9fr 2.1fr;
+                height: 470px;
+                margin-bottom: 30px;
+        
+        
+            }
+        }   
+  
+
+
+
+
+           
+        
+ 
+      
+
+      
+        
+        
+
+        
+    
