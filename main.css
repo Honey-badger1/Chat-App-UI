@@ -731,7 +731,7 @@ h3 {
         grid:
             'comand-line head-line'0.205fr 
             'search-container chat-message-list'0.15fr 
-            'conversation-list chat-message-list'60vh
+            'conversation-list chat-message-list'1.5fr
              'conversation-list chat-form'120px /24.5vw 74.5vw;
         
         height: 660;
@@ -743,8 +743,10 @@ h3 {
     #chat-container {
         display: grid;
         grid:
-            'comand-line head-line'0.205fr 'search-container chat-message-list'0.15fr 'conversation-list chat-message-list'65vh 'conversation-list chat-form'130px /0.9fr 2.1fr;
-        margin-bottom: 28pxpx;
+            'comand-line head-line'0.205fr 
+            'search-container chat-message-list'
+            0.15fr 'conversation-list chat-message-list'50vh 'conversation-list chat-form'130px /24vw 76vw;
+        height:630px;
 
 
     }
@@ -782,7 +784,7 @@ h3 {
              2fr 'conversation-list chat-form'130px /0.9fr 2.1fr;
    
         width: 1010px;
-        height:670;
+       
 
 
     }
@@ -1042,4 +1044,23 @@ h3 {
         margin-top: 15px;
     
     }
+}
+@media only screen and (max-width: 1050px) {
+
+    #chat-container {
+        display: grid;
+        grid:
+            'comand-line head-line'0.205fr
+             'search-container chat-message-list'0.15fr 
+             'conversation-list chat-message-list'70vh
+              'conversation-list chat-form'130px /24.5vw 74.5vw;
+
+    }
+
+    .message-content {
+        display: grid;
+        grid-template-columns: 20vw 34.5vw 20vw;
+        grid-auto-flow: row;
+    }
+
 }
