@@ -69,6 +69,8 @@ body {
     background-color: rgb(86, 130, 163);
     color: white;
     border: none;
+    margin-left: 20px;
+   
 
 }
 
@@ -157,7 +159,7 @@ body {
 .dropbtn>img {
     height: 25px;
     width: 20px;
-    margin-left: 20px;
+    
     background-color: rgb(86, 130, 163);
 
 }
@@ -443,7 +445,7 @@ h3 {
 
 .message-content {
     display: grid;
-    grid-template-columns:140px 395px 90px;
+    grid-template-columns:140px 395px 120px;
     grid-auto-flow: row;
 }
 
@@ -701,6 +703,8 @@ h3 {
 
   }
 
+  
+
     @media only screen and (max-width: 900px) {
         .smile{
             display: none;
@@ -775,6 +779,20 @@ h3 {
         
             }
         }
+        @media only screen and (max-height: 690px) {
+            #chat-container {
+                display: grid;
+                grid:
+                    'comand-line head-line'47px 
+                    'search-container chat-message-list'
+                    0.24fr 'conversation-list chat-message-list'
+                    1.5fr 'conversation-list chat-form'0.48fr /0.9fr 2.1fr;
+                height: 570px;
+                margin-bottom: 30px;
+        
+        
+            }
+        }    
 
 
         @media only screen and (max-height: 600px) {
@@ -784,27 +802,68 @@ h3 {
                     'comand-line head-line'47px 
                     'search-container chat-message-list'
                     0.24fr 'conversation-list chat-message-list'
-                    2fr 'conversation-list chat-form'0.48fr /0.9fr 2.1fr;
+                    1.5fr 'conversation-list chat-form'0.48fr /0.9fr 2.1fr;
                 height: 570px;
                 margin-bottom: 30px;
         
         
             }
         }
-        @media only screen and (max-height: 500px) {
+        @media only screen and (max-height: 500px)  {
             #chat-container {
                 display: grid;
                 grid:
                     'comand-line head-line'47px 
                     'search-container chat-message-list'
                     0.24fr 'conversation-list chat-message-list'
-                    2fr 'conversation-list chat-form'0.48fr /0.9fr 2.1fr;
+                    1.2fr 'conversation-list chat-form'0.48fr /0.9fr 2.1fr;
                 height: 470px;
                 margin-bottom: 30px;
-        
+            
         
             }
-        }   
+        }
+
+        @media only screen and (max-width: 950px) and (max-height:600px){
+
+            #chat-container {
+                display: grid;
+                grid:
+                    'comand-line head-line'47px
+                     'search-container chat-message-list'0.15fr 
+                     'conversation-list chat-message-list'2fr
+                      'conversation-list chat-form'130px /30vw 70vw;
+                height:600;
+        
+            }
+        
+            .message-content {
+                display: grid;
+                grid-template-columns: 20vw 34.5vw 20vw;
+                grid-auto-flow: row;
+            }
+            #search-container input{
+                width: 27vw;}
+            #chat-form {
+                display: grid;
+                grid:
+                    'me  chat smily other'60px 'symb symb symb symb '70px
+                     / 0.5fr 1fr 20px 0.5fr;
+            }
+            .symb {
+        
+                width: 45vw;
+            }
+        
+        
+          }
+        
+          
+        
+
+
+
+
   
 
 
