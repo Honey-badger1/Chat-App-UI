@@ -300,7 +300,7 @@ h3 {
 .conversation {
     display: grid;
     width: 100%;
-    grid-template-columns: 65px 1.2fr 55px;
+    grid-template-columns: 65px 1.2fr 65px;
     grid-template-rows: 27px 36px;
     color: rgb(114, 106, 106);
     font-size: 1.1rem;
@@ -467,7 +467,7 @@ h3 {
 }
 
 .message-text {
-    padding: 14pxvw 20px;
+    padding: 14px 20px;
     font-size: 1.1rem;
     margin-bottom: 5px;
 }
@@ -729,8 +729,11 @@ h3 {
     #chat-container {
         display: grid;
         grid:
-            'comand-line head-line'0.205fr 'search-container chat-message-list'0.15fr 'conversation-list chat-message-list'60vh 'conversation-list chat-form'120px /24.5vw 74.5vw;
-        margin-bottom: 28px;
+            'comand-line head-line'0.205fr 
+            'search-container chat-message-list'0.15fr 
+            'conversation-list chat-message-list'60vh
+             'conversation-list chat-form'120px /24.5vw 74.5vw;
+        
         height: 660;
     }
 
@@ -776,8 +779,8 @@ h3 {
             'comand-line head-line'48px
              'search-container chat-message-list'
              0.24fr 'conversation-list chat-message-list'
-             2fr 'conversation-list chat-form'0.48fr /0.9fr 2.1fr;
-        margin-bottom: 28px;
+             2fr 'conversation-list chat-form'130px /0.9fr 2.1fr;
+   
         width: 1010px;
         height:670;
 
@@ -1011,7 +1014,7 @@ h3 {
     }
     .conversation {
         display: grid;
-        grid-template-columns: 55px 1.6fr 55px;
+        grid-template-columns: 55px 1.6fr 65px;
         grid-template-rows: 24px 39px;
         color: rgb(114, 106, 106);
         font-size: 1.1rem;
