@@ -33,6 +33,11 @@ html {
     overflow-y: scroll;
 }
 
+#chat-message-list:hover .date{
+    margin-left: 10px;
+
+}
+
 
 #chat-message-list::-webkit-scrollbar {
     width: 10px;
@@ -61,6 +66,7 @@ body {
 .dropdown {
     position: relative;
     display: inline-block;
+    width:320px;
     background: rgb(86, 130, 163);
     z-index: 2;
 }
@@ -69,7 +75,8 @@ body {
     background-color: rgb(86, 130, 163);
     color: white;
     border: none;
-    margin-left: 20px;
+    
+  
    
 
 }
@@ -93,6 +100,8 @@ body {
     background-color: rgb(85, 119, 146);
 
 }
+
+
 
 
 .status {
@@ -159,6 +168,8 @@ body {
 .dropbtn>img {
     height: 25px;
     width: 20px;
+    margin-right: 30px;
+    margin-left: 20px;
     
     background-color: rgb(86, 130, 163);
 
@@ -178,16 +189,18 @@ body {
     display: flex;
     place-items: center;
     color: white;
-    text-align: center;
     grid-area: comand-line;
 
 }
 
 h3 {
     font-size: 13.5px;
-    font-weight: 596;
+    font-weight: 600;
+    margin-left: 12px;
+    margin-top: 6px;
+    float: right;
     color: rgb(248, 247, 247);
-    margin-left: 39px;
+ 
 
 }
 
@@ -220,10 +233,16 @@ h3 {
     display: block;
 }
 
-.dropdown:hover .dropbtn {
-    background-color: rgb(85, 119, 146);
+.dropdown:hover .dropbtn > img {
+    background-color:rgb(85, 119, 146);
+ 
 }
-
+.dropdown:hover .dropbtn {
+    background-color:rgb(85, 119, 146);
+ 
+}
+.dropdown:hover{ 
+background-color:rgb(85, 119, 146);}
 .dropdown-content a:hover {
     background-color: rgb(130, 170, 202);
 }
@@ -248,6 +267,16 @@ h3 {
 
 .dropdown:hover .leftdropdown-content {
     display: grid;
+}
+
+#comand-line:hover .dropdown{
+    background-color:rgb(85, 119, 146);
+}
+#comand-line:hover .dropbtn{
+    background-color:rgb(85, 119, 146);
+}
+#comand-line:hover .dropbtn>img{
+    background-color:rgb(85, 119, 146);
 }
 
 .leftdropdown-content ul>li {
@@ -319,19 +348,19 @@ h3 {
    
     font-size: 11px;
     color: white;
-    margin-top: 3px;
+    margin-top: 6px;
    
   
 }
 .unread{
 
-   background: url('img/circle.png')center center no-repeat;;
-   width: 23px;
-   height: 23px;
+   background-color: rgb(49, 187, 79);
+   width: 24px;
+   height: 24px;
    text-align: center;
    border-radius:100%;
-   margin-left:35px ;
-   margin-top: 6px;
+   margin-left:30px ;
+  
   
 
 }
