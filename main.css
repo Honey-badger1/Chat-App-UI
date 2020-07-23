@@ -70,6 +70,12 @@ body {
     background: rgb(86, 130, 163);
     z-index: 2;
 }
+.dropdownl {
+    position: relative;
+    display: inline-block;
+    background: rgb(86, 130, 163);
+    z-index: 2;
+}
 
 .dropbtn {
     background-color: rgb(86, 130, 163);
@@ -265,7 +271,7 @@ background-color:rgb(85, 119, 146);}
     z-index: 2;
 }
 
-.dropdown:hover .leftdropdown-content {
+.dropdownl:hover .leftdropdown-content {
     display: grid;
 }
 
