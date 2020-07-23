@@ -501,7 +501,7 @@ background-color:rgb(85, 119, 146);}
 .message-row {
     display: grid;
     grid-template-columns: 80%;
-    margin-bottom: 10px;
+    margin-bottom: 18px;
 }
 
 .message-text {
