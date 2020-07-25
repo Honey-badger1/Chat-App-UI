@@ -16,11 +16,21 @@ html {
     font-size: 12px;
 }
 
+#conversation-list:hover .create-date{
+    margin-left: 0.4px;
+ 
+ }
+ #conversation-list:hover .unread{
+     margin-left: 30.4px;
+  
+  }
+
 
 
 #conversation-list::-webkit-scrollbar {
-
+    position: absolute;
     width: 3px;
+    z-index: 2;
     background: rgba(30, 85, 127, 0.3);
 }
 #chat-message-list::-webkit-scrollbar-track{
@@ -49,14 +59,7 @@ html {
     border:none;
 
 }
-#conversation-list:hover .create-date{
-   margin-left: 0.4px;
 
-}
-#conversation-list:hover .unread{
-    margin-left: 30.4px;
- 
- }
  
 
 #chat-message-list:hover .date{
