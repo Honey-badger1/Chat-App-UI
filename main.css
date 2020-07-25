@@ -928,21 +928,7 @@ background-color:rgb(85, 119, 146);}
         
         
           }
-  
-          @media only screen and (min-height: 1024px) {
-            #chat-container {
-                display: grid;
-                grid:
-                    'comand-line head-line'47px 
-                    'search-container chat-message-list'
-                   0.24fr 'conversation-list chat-message-list'
-                    3.2fr 'conversation-list chat-form'0.48fr /0.9fr 2.1fr;
-                height: 994px;
-                margin-bottom: 30px;
-        
-        
-            }}
-        
+
           
         
 
