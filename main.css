@@ -79,6 +79,11 @@ html {
     background: rgba(30, 85, 127, 0.3);
     border-right: 6px white solid;
 }
+#chat-message-list:-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+    display: none;
+}
 
 
 
