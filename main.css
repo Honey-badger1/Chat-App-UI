@@ -516,7 +516,7 @@ background-color:rgb(85, 119, 146);}
 
 .message-content {
     display: grid;
-    grid-template-columns:140px 395px 120px;
+    grid-template-columns:140px 375px 100px;
     grid-auto-flow: row;
 }
 
@@ -547,7 +547,8 @@ background-color:rgb(85, 119, 146);}
 }
 
 .message-time {
-    margin-left: 20px;
+    margin-left: 10px;
+    margin-right: 30px;
     font-size: 0.9rem;
     color: #777;
 }
