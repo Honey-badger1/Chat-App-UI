@@ -21,36 +21,63 @@ html {
 #conversation-list::-webkit-scrollbar {
 
     width: 3px;
+    background: rgba(30, 85, 127, 0.3);
+}
+#chat-message-list::-webkit-scrollbar-track{
     background-color: rgba(227, 233, 238, 0.93);
+
+}
+#conversation-list::-webkit-scrollbar-track{
+    background-color: rgba(227, 233, 238, 0.93);
+
+}
+#conversation-list::-webkit-scrollbar-thumb {
+   
+    border-radius: 10px;
+    background: rgba(30, 85, 127, 0.3);
+    
 }
 
-#conversation-list::-webkit-scrollbar-thumb {
-    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 6px inset;
-    border-radius: 10px;
-}
+
 
 #chat-message-list:hover {
     overflow-y: scroll;
 }
+#conversation-list:hover {
+    overflow-y: scroll;
+    border:none;
+
+}
+#conversation-list:hover .create-date{
+   margin-left: 0.4px;
+
+}
+#conversation-list:hover .unread{
+    margin-left: 30.4px;
+ 
+ }
+ 
 
 #chat-message-list:hover .date{
-    margin-left: 10px;
+    margin-left: 9px;
 
 }
 
 
 #chat-message-list::-webkit-scrollbar {
-    width: 10px;
-    margin-right: 10px;
+    width: 9px;
     z-index: 2;
-    position: absolute;
-    background-color:rgba(227, 233, 238, 0.93);}
+    position: relative;
+    background: rgba(30, 85, 127, 0.3);}
 
 
 #chat-message-list::-webkit-scrollbar-thumb {
-    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 6px inset;
-    border-radius: 10px;
+   
+    border-radius: 2px;
+    background: rgba(30, 85, 127, 0.3);
 }
+
+
 
 body {
     display: grid;
@@ -329,8 +356,8 @@ background-color:rgb(85, 119, 146);}
 
 #conversation-list {
     grid-area: conversation-list;
-    overflow-y: scroll;
-    overflow-x: hidden;
+   border-right:2px solid rgb(208, 210, 214);
+    overflow: hidden;
 
 
 }
@@ -425,15 +452,15 @@ background-color:rgb(85, 119, 146);}
 }
 
 #search-container input {
-    color: #ccc;
+    color: black;
     outline: none;
-    font-weight: bold;
+    font-weight: 200;
     border-radius: 2px;
     height: 35px;
     border: 0;
     width: 290px;
-    padding-left: 35px;
-    font-size: 1.4rem;
+    padding-left: 45px;
+    font-size: 13px;
     background: url('img/search.png') no-repeat rgba(197, 201, 202, 0.3);
     background-position: 15px center;
     background-size: 20px 20px;
