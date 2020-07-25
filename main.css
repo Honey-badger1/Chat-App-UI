@@ -16,15 +16,6 @@ html {
     font-size: 12px;
 }
 
-#conversation-list:hover .create-date{
-    margin-left: 0.4px;
- 
- }
- #conversation-list:hover .unread{
-     margin-left: 30.4px;
-  
-  }
-
 
 
 #conversation-list::-webkit-scrollbar {
@@ -46,6 +37,15 @@ html {
    
     border-radius: 10px;
     background: rgba(44, 105, 151, 0.3);
+    visibility: hidden;
+    
+}
+
+#conversation-list:hover::-webkit-scrollbar-thumb {
+   
+    border-radius: 10px;
+    background: rgba(44, 105, 151, 0.3);
+    visibility: visible;
     
 }
 
@@ -54,11 +54,7 @@ html {
 #chat-message-list:hover {
     overflow-y: scroll;
 }
-#conversation-list:hover {
-    overflow-y: scroll;
-    border:none;
 
-}
 
  
 
@@ -367,8 +363,9 @@ background-color:rgb(85, 119, 146);}
 
 #conversation-list {
     grid-area: conversation-list;
-   border-right:2px solid rgb(208, 210, 214);
-    overflow: hidden;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
 
 
 }
